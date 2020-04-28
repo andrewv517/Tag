@@ -77,7 +77,6 @@ public class EntityListener implements Listener {
                 arena.end(false);
                 damager.sendMessage(ChatColor.GOLD + "You win!");
                 receiver.sendMessage(ChatColor.GOLD + "You lost.");
-                arena.stopTimer();
             }
         }
 
@@ -104,7 +103,6 @@ public class EntityListener implements Listener {
 
             }
 
-            a.stopTimer();
             a.end(false);
 
         }
@@ -130,7 +128,6 @@ public class EntityListener implements Listener {
 
             }
 
-            a.stopTimer();
             a.end(false);
 
         }
