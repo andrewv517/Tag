@@ -123,6 +123,7 @@ public class Arena implements Listener {
         this.challenged.getInventory().clear();
         this.executor.getInventory().clear();
         tagMain.getArenaManager().getArenas().remove(this);
+        stopTimer();
         wb.reset();
 
         if (ranOut) {
