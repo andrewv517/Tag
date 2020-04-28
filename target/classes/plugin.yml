@@ -1,0 +1,17 @@
+name: Tag
+version: 1.0-SNAPSHOT
+main: tag.TagMain
+api-version: 1.13
+commands:
+  challenge:
+    description: Challenge a player to a game of Tag.
+    usage: /<command> [player]
+  accept:
+    description: Accept a game of Tag.
+    usage: /<command> [player]
+  deny:
+    description: Denies a game of Tag.
+    usage: /<command> [player]
+  stopgame:
+    description: Ends the current game.
+    usage: </command>

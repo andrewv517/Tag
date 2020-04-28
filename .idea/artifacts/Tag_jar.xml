@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Tag:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Tag_jar</output-path>
+    <root id="archive" name="Tag.jar">
+      <element id="module-output" name="Tag" />
+    </root>
+  </artifact>
+</component>
