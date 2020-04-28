@@ -99,22 +99,19 @@ public class Arena implements Listener {
 
     public void startTimer() {
         BukkitScheduler scheduler = Bukkit.getServer().getScheduler();
-        taskID = scheduler.scheduleSyncRepeatingTask(tagMain, new Runnable() {
-            @Override
-            public void run() {
-                if (timer == 0) {
-                    end(true);
-                    stopTimer();
-                    return;
-                }
-
-                if (timer == 120 || timer == 90 || timer == 60 || timer == 30 || timer <= 10) {
-                    Bukkit.broadcastMessage(ChatColor.GOLD + "Time remaining " + timer + " seconds!");
-                }
-
-                timer--;
-
+        taskID = scheduler.scheduleSyncRepeatingTask(tagMain, () -> {
+            if (timer == 0) {
+                end(true);
+                stopTimer();
+                return;
             }
+
+            if (timer == 120 || timer == 90 || timer == 60 || timer == 30 || timer <= 10) {
+                Bukkit.broadcastMessage(ChatColor.GOLD + "Time remaining " + timer + " seconds!");
+            }
+
+            timer--;
+
         }, 0L, 20L);
 
     }
