@@ -11,12 +11,12 @@ import java.util.Random;
 
 public class Arena implements Listener {
 
-    private Player challenged;
-    private Player executor;
-    private World world;
-    private WorldBorder wb;
     private static TagMain tagMain;
-    private Random random = new Random();
+    private final Player challenged;
+    private final Player executor;
+    private final World world;
+    private final WorldBorder wb;
+    private final Random random = new Random();
     private boolean started = false;
     private int timer;
     private int taskID;
@@ -55,8 +55,8 @@ public class Arena implements Listener {
         wb.setCenter(x, z);
         wb.setSize(100, 0);
 
-        this.challenged.teleport(new Location(world, x, this.world.getHighestBlockYAt(x, z-45) +3, z - 45));
-        this.executor.teleport(new Location(world, x, this.world.getHighestBlockYAt(x, z+45)+3, z + 45));
+        this.challenged.teleport(new Location(world, x, this.world.getHighestBlockYAt(x, z - 45) + 3, z - 45));
+        this.executor.teleport(new Location(world, x, this.world.getHighestBlockYAt(x, z + 45) + 3, z + 45));
 
         this.challenged.getInventory().clear();
         this.executor.getInventory().clear();

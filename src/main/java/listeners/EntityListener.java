@@ -1,6 +1,5 @@
 package listeners;
 
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -28,15 +27,15 @@ public class EntityListener implements Listener {
     @EventHandler
     public void onEntityInteract(PlayerInteractEvent event) {
 
-        if(event.getItem() == null) {
+        if (event.getItem() == null) {
             return;
         }
 
-        if(!event.getItem().hasItemMeta()) {
+        if (!event.getItem().hasItemMeta()) {
             return;
         }
 
-        if (event.getAction() != Action.RIGHT_CLICK_AIR && event.getAction() !=  Action.RIGHT_CLICK_BLOCK) {
+        if (event.getAction() != Action.RIGHT_CLICK_AIR && event.getAction() != Action.RIGHT_CLICK_BLOCK) {
             return;
         }
 

@@ -44,8 +44,6 @@ public class Deny implements CommandExecutor {
         }
 
 
-
-
         for (Arena a : tagMain.getArenaManager().getPotentials()) {
             if (a.getExecutor().getName().equalsIgnoreCase(challenger.getName()) &&
                     a.getChallenged().getName().equals(player.getName())) {
@@ -62,7 +60,7 @@ public class Deny implements CommandExecutor {
 
     public Player getPlayer(String name, World world) {
 
-        for(Player p : world.getPlayers()) {
+        for (Player p : world.getPlayers()) {
             if (p.getName().equalsIgnoreCase(name)) {
                 return p;
             }

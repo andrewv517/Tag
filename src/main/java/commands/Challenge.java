@@ -25,7 +25,7 @@ public class Challenge implements CommandExecutor {
             return true;
         }
 
-        if(args.length != 1) {
+        if (args.length != 1) {
             sender.sendMessage(ChatColor.RED + "Incorrect command usage!");
             return true;
         }
@@ -47,7 +47,6 @@ public class Challenge implements CommandExecutor {
         }
 
 
-
         Player challenged = getPlayer(args[0], world);
         challenged.sendMessage(ChatColor.GOLD + "You have been challenged to a game of Tag by " + player.getName() +
                 " Type /accept " + player.getName() + " to accept, or /deny " + player.getName() + " to deny!");
@@ -58,14 +57,13 @@ public class Challenge implements CommandExecutor {
         player.sendMessage(ChatColor.GOLD + "Sent Challenge to " + args[0]);
 
 
-
         return true;
     }
 
 
     public boolean serverHasPlayer(String playerName, World world) {
 
-        for(Player p : world.getPlayers()) {
+        for (Player p : world.getPlayers()) {
             if (p.getName().equalsIgnoreCase(playerName)) {
                 return true;
             }

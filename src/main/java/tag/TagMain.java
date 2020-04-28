@@ -12,10 +12,11 @@ import java.util.Objects;
 
 public final class TagMain extends JavaPlugin {
 
-    private ArenaManager arenaManager;
     public static TagMain tagMain;
+    private ArenaManager arenaManager;
 
-    public static void main(String[] args) {}
+    public static void main(String[] args) {
+    }
 
     @Override
     public void onEnable() {
@@ -31,7 +32,7 @@ public final class TagMain extends JavaPlugin {
         Listener rightClick = new EntityListener();
 
     }
-    
+
 
     public ArenaManager getArenaManager() {
         return arenaManager;
